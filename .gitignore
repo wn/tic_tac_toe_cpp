@@ -1,6 +1,6 @@
-a.out
-.vscode
-ttt
+**/a.out
+**/.vscode
+**/ttt
 bazel-bin
 bazel-genfiles
 bazel-out
