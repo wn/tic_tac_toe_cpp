@@ -1,4 +1,9 @@
 a.out
 .vscode
 ttt
+bazel-bin
+bazel-genfiles
+bazel-out
+bazel-testlogs
+bazel-tic_tac_toe_cpp
 
