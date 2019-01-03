@@ -1,4 +1,9 @@
+CFLAGS = -O
+CC = g++
+SRC = tic_tac_toe.cpp Game.cc Cell.cc
+OBJ = $(SRC:.cpp = .o) 
+
 make:
-	g++ tic_tac_toe.cpp -o ttt
+	$(CC) $(CFLAGS)  $(OBJ) -o ttt
 clean:
 	rm ttt
