@@ -3,7 +3,7 @@
 
 Player cellValue;
 Cell::Cell() {
-    cellValue = EMPTY;
+    cellValue = Player::EMPTY;
 }
 
 Player Cell::getPlayer() {
@@ -20,15 +20,15 @@ bool Cell::setPlayer(Player x) {
 }
 
 bool Cell::isEmpty() {
-    return cellValue == EMPTY;
+    return cellValue == Player::EMPTY;
 }
 
 bool Cell::isPlayerOne() {
-    return cellValue == ONE;
+    return cellValue == Player::ONE;
 }
 
 bool Cell::isPlayerTwo() {
-    return cellValue == TWO;
+    return cellValue == Player::TWO;
 }
 
 bool Cell::isSamePlayer(Cell c) {

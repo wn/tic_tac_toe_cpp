@@ -6,7 +6,6 @@
 class Cell {
     public:
         Player cellValue;
-
         Cell();
 
         Player getPlayer();

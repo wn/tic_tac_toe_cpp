@@ -1,12 +1,13 @@
 #include "Game.h"
 #include "Cell.h"
 #include <iostream>
+#define DEF 35
 
 Game::Game() {
-    currentPlayer = ONE;
+    currentPlayer = Player::ONE;
     game = std::map<int, Cell>();
     gameOver = false;
-    winner = EMPTY;
+    winner = Player::EMPTY;
     numOfMoves = 0;
 }
 
@@ -26,10 +27,10 @@ std::string Game::valAtPos(int pos) {
 }
 
 void Game::swapCurrentPlayer() {
-    if (currentPlayer == ONE) {
-        currentPlayer = TWO;
-    } else if (currentPlayer == TWO) {
-        currentPlayer = ONE;
+    if (currentPlayer == Player::ONE) {
+        currentPlayer = Player::TWO;
+    } else if (currentPlayer == Player::TWO) {
+        currentPlayer = Player::ONE;
     }
 }
 
@@ -94,18 +95,18 @@ void Game::drawGame() {
 
     if (isGameOver()) {
         switch (winner) {
-            case ONE:
+            case Player::ONE:
                 std::cout << "WINNER IS: PLAYER 1!!!" << std::endl;
                 break;
-            case TWO:
+            case Player::TWO:
                 std::cout << "WINNER IS: PLAYER 2!!!" << std::endl;
                 break;
-            case EMPTY:
+            case Player::EMPTY:
                 std::cout << "GAME IS A DRAW!!!" << std::endl;
                 break;
         }
     } else {
-        std::cout << "It is now " << (currentPlayer == ONE ? "Player 1" : "Player 2") <<" turn" << std::endl;
+        std::cout << "It is now " << (currentPlayer == Player::ONE ? "Player 1" : "Player 2") <<" turn" << std::endl;
     }
     for (int i = 0; i < 13; i++) {
         for (int j = 0; j < 13; j++) {
